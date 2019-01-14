@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+     <link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/crystal" type="text/css"/>
+   </head>
+    <body>
+        <header id="masterhead">
+            <div id="container">
+                <h1 id="title">Crystal Collector </h1>
+            </div>
+        </header>
+<div id="rules"> Rules: 
+    <ul>
+        <li>✦You will be assigned a random number at the start of the game</li>
+        <li>✦There are four crystals below. By clicking on a specific crystal you will add an numeric amount to your total. </li>
+        <li>✦You will win the game when your total equals the random number and will lose if you go over.</li>
+        <li>✦The game will then reset at the end for you to play again</li>
+    </ul>
+        <p id="luck">Good Luck!</p>
+</div>
+  
+    <div> 
+        <p id="winstext">Wins:</p>
+    
+    </div>
+    <div>
+    <p id="lossestext" >Losses:</p>
+   </div>
+</div>
+<div id="buttons">
+    <button id="blue" type = "button"> <img src = "assets/images/blue.png"> </button>
+    <button id="green" type = "button"> <img src = "assets/images/green.png"> </button>
+    <button id="red" type = "button"> <img src = "assets/images/red.png"> </button>
+    <button id="yellow" type = "button"> <img src = "assets/images/yellow.png"> </button>
+
+</div>
+<div class="numbers">
+<p id="current">Number to Get</p>
+<p id="randomNumber"></p>
+</div>
+<div class="numbers">
+<p id="changing">Your Number</p>
+<p id="yourNumber"></p>
+</div>
+</div>
+<div id="restartdiv">
+    <button id="restart" type="button">Restart</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+    </body>
