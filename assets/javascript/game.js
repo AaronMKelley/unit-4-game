@@ -14,56 +14,64 @@ if (i>=19){
 var randomNum=Math.floor(Math.random()*num.length)
 var startNum= num[randomNum];
    $('#randomNumber').html(startNum)
-    console.log(startNum)
-    console.log(num)
-    console.log(randomNum)
- 
 
 
+  
 var num1 =[];
 for (var i=1;i<=12;i++){
-    num1.push(i)
+    num1.push(i);
    
-}
-restartGame();
+ }
+var randomNum1=Math.floor(Math.random()*num1.length)
+var randomNum2=Math.floor(Math.random()*num1.length)
+var randomNum3=Math.floor(Math.random()*num1.length)
+var randomNum4=Math.floor(Math.random()*num1.length)
+
+// var crystalNum1 = num[randomNum1];
+
+
+
+
 
 function restartGame(){
     randomNum=Math.floor(Math.random()*num.length)
     startNum= num[randomNum];
+    $("#randomNumber").html(startNum)
+    
     randomNum1=Math.floor(Math.random()*num1.length)
     randomNum2=Math.floor(Math.random()*num1.length)
     randomNum3=Math.floor(Math.random()*num1.length)
     randomNum4=Math.floor(Math.random()*num1.length)
-    crystalNum1 = num[randomNum1];
-    crystalNum2= num[randomNum2];
-    crystalNum3 = num[randomNum3];
-    crystalNum4 = num[randomNum4];
-    $("#randomNumber").html(startNum)
+    
+    console.log(randomNum1)
+    console.log(randomNum2)
+    console.log(randomNum3)
+    console.log(randomNum4)
+  
     $("#yourNumber").empty()
     yourNum= 0;
 
 }
 
 
-
 // assign crystals value and add to total when clicked. 
 
 $('#blue').on("click",function(){
-   yourNum += crystalNum1
-   console.log(yourNum);
+   yourNum += randomNum1
+  
    $("#yourNumber").text(yourNum);
    winorlose();
    
 });
  $('#green').on("click",function(){
-    yourNum += crystalNum2
+    yourNum += randomNum2
     console.log(yourNum);
     $("#yourNumber").text(yourNum);
     winorlose();
  });
 
  $('#red').on("click",function(){
-    yourNum += crystalNum3
+    yourNum += randomNum3
     console.log(yourNum);
     $("#yourNumber").text(yourNum);    
     winorlose();
@@ -71,7 +79,7 @@ $('#blue').on("click",function(){
 });
 
 $('#yellow').on("click",function(){
-    yourNum += crystalNum4
+    yourNum += randomNum4
     console.log(yourNum);
     $("#yourNumber").text(yourNum); 
     winorlose()
