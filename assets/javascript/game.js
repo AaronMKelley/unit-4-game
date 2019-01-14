@@ -19,9 +19,10 @@ var startNum= num[randomNum];
   
 var num1 =[];
 for (var i=1;i<=12;i++){
+if(i>=1 && i<=12){
     num1.push(i);
-   
- }
+}
+ };
 var randomNum1=Math.floor(Math.random()*num1.length)
 var randomNum2=Math.floor(Math.random()*num1.length)
 var randomNum3=Math.floor(Math.random()*num1.length)
@@ -38,10 +39,10 @@ function restartGame(){
     startNum= num[randomNum];
     $("#randomNumber").html(startNum)
     
-    randomNum1=Math.floor(Math.random()*num1.length)
-    randomNum2=Math.floor(Math.random()*num1.length)
-    randomNum3=Math.floor(Math.random()*num1.length)
-    randomNum4=Math.floor(Math.random()*num1.length)
+    randomNum1=Math.ceil(Math.random()*num1.length)
+    randomNum2=Math.ceil(Math.random()*num1.length)
+    randomNum3=Math.ceil(Math.random()*num1.length)
+    randomNum4=Math.ceil(Math.random()*num1.length)
     
     console.log(randomNum1)
     console.log(randomNum2)
