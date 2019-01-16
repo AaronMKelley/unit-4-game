@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+// 	function alertHi(){
+//         alert('hi')
+//     }
+// // correct, let js decide when 3 seconds are done 
+//     setTimeout(alertHi, 3000);
+//     setInterval(alertHi, 3000);
+    
+
+   
+//  // wrong this will run immediately 
+//     setTimeout(alertHi(), 3000);
+//     setInterval(alertHi(), 3000);
+
+// this is wrong 
+    function doubleAlert(x){
+        alert(x*2);
+    }
+    // setInterval(doubleAlert, 3000);
+
+// this is correct 
+    setInterval(function(){
+        doubleAlert(3);
+    }, 3000);
+
+    function runAlertDouble(){
+        doubleAlert(3);
+    }
+
+    setIntervl(runAlertDouble, 4000);
+    </script>
+</body>
+</html>

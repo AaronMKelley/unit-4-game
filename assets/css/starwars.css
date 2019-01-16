@@ -1,0 +1,23 @@
+body{
+    background-image:url("https://lumiere-a.akamaihd.net/v1/images/Hoth_d074d307.jpeg?region=0%2C0%2C1200%2C675&width=960");
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: 'Star Jedi';
+    font-size: 48px;
+    text-shadow: 4px 4px 4px #aaa;
+    color: #FFFF82; 
+}
+
+.title{
+     text-align: center;
+}
+
+.character{
+    width: 180px;
+    height:180px;
+}
+
+button img{
+    width: 150px;
+    height:150px;
+}

@@ -12,21 +12,22 @@ if (i>=19){
 }
 };
 var randomNum=Math.floor(Math.random()*num.length)
+// var randomNum=Math.floor(Math.random()*120 + 19)
 var startNum= num[randomNum];
    $('#randomNumber').html(startNum)
-
+    console.log(startNum)
 
   
-var num1 =[];
-for (var i=1;i<=12;i++){
-if(i>=1 && i<=12){
-    num1.push(i);
-}
- };
-var randomNum1=Math.floor(Math.random()*num1.length)
-var randomNum2=Math.floor(Math.random()*num1.length)
-var randomNum3=Math.floor(Math.random()*num1.length)
-var randomNum4=Math.floor(Math.random()*num1.length)
+// var num1 =[];
+// for (var i=1;i<=12;i++){
+//     num1.push(i);
+//     console.log(num1.length);
+
+//  }
+var randomNum1=Math.ceil(Math.random()*12)
+var randomNum2=Math.ceil(Math.random()*12)
+var randomNum3=Math.ceil(Math.random()*12)
+var randomNum4=Math.ceil(Math.random()*12)
 
 // var crystalNum1 = num[randomNum1];
 
@@ -38,19 +39,20 @@ function restartGame(){
     randomNum=Math.floor(Math.random()*num.length)
     startNum= num[randomNum];
     $("#randomNumber").html(startNum)
-    
-    randomNum1=Math.ceil(Math.random()*num1.length)
-    randomNum2=Math.ceil(Math.random()*num1.length)
-    randomNum3=Math.ceil(Math.random()*num1.length)
-    randomNum4=Math.ceil(Math.random()*num1.length)
+    $('.buttons').attr('disabled',false);
+    $("#yourNumber").html("");
+    yourNum= 0;
+
+    randomNum1=Math.floor(Math.random()*num1.length)
+    randomNum2=Math.floor(Math.random()*num1.length)
+    randomNum3=Math.floor(Math.random()*num1.length)
+    randomNum4=Math.floor(Math.random()*num1.length)
     
     console.log(randomNum1)
     console.log(randomNum2)
     console.log(randomNum3)
-    console.log(randomNum4)
-  
-    $("#yourNumber").empty()
-    yourNum= 0;
+    // console.log(ran)
+
 
 }
 
@@ -88,14 +90,18 @@ $('#yellow').on("click",function(){
 });  
   function winorlose(){
 if(yourNum=== startNum){
-        $("#yourNumber").append("Winner Winner Chicken Dinner");
-        wins ++
-        $("#winstext").text("Wins:" + wins)
+        $("#yourNumber").append(' '+"Winner Winner Chicken Dinner");
+        wins ++;
+        $("#winstext").text("Wins:" + wins);
+        $('#randomNumber').text("Press Restart");
+        $('.buttons').attr('disabled',true)
 }else if( yourNum > startNum) {
-       $("#yourNumber").html("LOSER")
+       $("#yourNumber").text("LOSER")
         losses ++
+        $('#randomNumber').text("Press Restart");
         $('#lossestext').text("Losses:" + losses)
-        
+        $('.buttons').attr('disabled',true)
+
 }};
 
 $('#restart').on('click',function(){
