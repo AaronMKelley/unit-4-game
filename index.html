@@ -4,50 +4,54 @@
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
      <link rel="stylesheet" type="text/css" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
      <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/crystal" type="text/css"/>
    </head>
     <body>
         <header id="masterhead">
-            <div id="container">
-                <h1 id="title">Crystal Collector </h1>
+            <div class='row' id="container">
+                <h1 class='col-12 bor' id="title">Crystal Collector </h1>
             </div>
         </header>
-<div id="rules"> Rules: 
+<div class='col-12 bor' id="rules"> Rules: 
     <ul>
         <li>✦You will be assigned a random number at the start of the game</li>
         <li>✦There are four crystals below. By clicking on a specific crystal you will add an numeric amount to your total. </li>
         <li>✦You will win the game when your total equals the random number and will lose if you go over.</li>
         <li>✦The game will then reset at the end for you to play again</li>
     </ul>
-        <p id="luck">Good Luck!</p>
+        <p class='col-4 bor' id="luck">Good Luck!</p>
 </div>
   
-    <div> 
-        <p id="winstext">Wins:</p>
-
-    <p id="lossestext" >Losses:</p>
+    <div class='col-12 bor'> 
+        <p  class='col-1 bor' id="winstext">Wins: </p>
    </div>
+   <div class='row'>
+       <p class='col-1 bor' id="lossestext" > Losses:</p>
 </div>
-<div id="buttondiv">
-    <button class="buttons" id="blue" type = "button"> <img src = "assets/images/blue.png"> </button>
-    <button class="buttons" id="green" type = "button"> <img src = "assets/images/green.png"> </button>
-    <button class="buttons" id="red" type = "button"> <img src = "assets/images/red.png"> </button>
-    <button class="buttons" id="yellow" type = "button"> <img src = "assets/images/yellow.png"> </button>
+</div>
+<div class='row'  id="buttondiv">
+    <button class='col-3 bor'class="buttons" id="blue" type = "button"> <img src = "assets/images/blue.png"> </button>
+    <button  class='col-3 bor'class="buttons" id="green" type = "button"> <img src = "assets/images/green.png"> </button>
+    <button class='col-3 bor'class="buttons" id="red" type = "button"> <img src = "assets/images/red.png"> </button>
+    <button class='col-3 bor'class="buttons" id="yellow" type = "button"> <img src = "assets/images/yellow.png"> </button>
 
 </div>
 <div class="numbers">
 <p id="current">Number to Get</p>
 <p id="randomNumber"></p>
 </div>
-<div class="numbers">
-<p id="changing">Your Number</p>
-<p id="yourNumber"></p>
+<div class='row' class="numbers">
+<p  id="changing">Your Number</p>
+</div>
+<div class='row'>
+<p  class='col-4 bor' id="yourNumber"></p>
 </div>
 </div>
-<div id="restartdiv">
-    <button id="restart" type="button">Restart</button>
+<div class='row' id="restartdiv">
+    <button class='col-4 bor'id="restart" type="button">Restart</button>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

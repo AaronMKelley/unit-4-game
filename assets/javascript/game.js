@@ -12,27 +12,27 @@ if (i>=19){
 }
 };
 var randomNum=Math.floor(Math.random()*num.length)
-// var randomNum=Math.floor(Math.random()*120 + 19)
 var startNum= num[randomNum];
    $('#randomNumber').html(startNum)
     console.log(startNum)
 
   
-// var num1 =[];
-// for (var i=1;i<=12;i++){
-//     num1.push(i);
-//     console.log(num1.length);
 
-//  }
-var randomNum1=Math.ceil(Math.random()*12)
-var randomNum2=Math.ceil(Math.random()*12)
-var randomNum3=Math.ceil(Math.random()*12)
-var randomNum4=Math.ceil(Math.random()*12)
+var randomNum1;
+var randomNum2;
+var randomNum3;
+var randomNum4;
 
 // var crystalNum1 = num[randomNum1];
 
+function updateNumbers(){
+ randomNum1=Math.ceil(Math.random()*12)
+ randomNum2=Math.ceil(Math.random()*12)
+ randomNum3=Math.ceil(Math.random()*12)
+ randomNum4=Math.ceil(Math.random()*12)
+}
 
-
+updateNumbers();
 
 
 function restartGame(){
@@ -43,17 +43,7 @@ function restartGame(){
     $("#yourNumber").html("");
     yourNum= 0;
 
-    randomNum1=Math.floor(Math.random()*num1.length)
-    randomNum2=Math.floor(Math.random()*num1.length)
-    randomNum3=Math.floor(Math.random()*num1.length)
-    randomNum4=Math.floor(Math.random()*num1.length)
-    
-    console.log(randomNum1)
-    console.log(randomNum2)
-    console.log(randomNum3)
-    // console.log(ran)
-
-
+    updateNumbers();
 }
 
 
@@ -68,14 +58,13 @@ $('#blue').on("click",function(){
 });
  $('#green').on("click",function(){
     yourNum += randomNum2
-    console.log(yourNum);
     $("#yourNumber").text(yourNum);
     winorlose();
  });
 
  $('#red').on("click",function(){
     yourNum += randomNum3
-    console.log(yourNum);
+   
     $("#yourNumber").text(yourNum);    
     winorlose();
     
@@ -83,7 +72,6 @@ $('#blue').on("click",function(){
 
 $('#yellow').on("click",function(){
     yourNum += randomNum4
-    console.log(yourNum);
     $("#yourNumber").text(yourNum); 
     winorlose()
  

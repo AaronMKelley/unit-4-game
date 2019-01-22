@@ -1,0 +1,187 @@
+1. What does a doctype do?
+Allows a page to know what type of document you are trying to create. For example <doctype>HTML<doctype> allows the page to know we are creating an 
+HTML file. 
+
+2. What are data- attributes good for?
+Data attritubutes are good for data filing to keep things organized and as well as something that you can use to call on later in your JS. For example if you
+have an array of animals you can attribute data-age to them to catergorize and then data file them based on their given age. You can then call "data-age" later in 
+your CSS or JS 
+
+
+3. Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?
+You want to put the links to your css and JS links before the head and body because you want them to effect what you then include below. The code takes a top down
+approach so if you were to include the links after, there is a chance that your CSS and HTML will not reflected. Exceptions to this include the JS files you put
+at the end when you are using BootStrap. 
+
+4. Describe Floats and how they work.
+Floats as in float right or float left are CSS styling options that take all the content and styling of a degisinated section and moves it 
+to the farthest position either left or right. The content will continue to float this way it until float:clear is denoted. 
+
+5. Describe the box model.
+Box model refers to the CSS modeling of elemetns and the contents of them. The best way to describe them is to lay out the different aspects of box model which 
+include content, paddingg, border, and margins,
+
+6. Have you ever used a grid system, and if so, what do you prefer?
+
+
+7. Question: What is the value of foo?
+    var foo = 10 + '20';
+
+    "1020"
+
+8. Question: What will be the output of the code below?
+    console.log(0.1 + 0.2 == 0.3);
+
+false. 
+When you start to get into decimal points with JS they are do not come out as even numbers. 
+For example 0.3 can be denoted as 0.30000000000004
+
+9. Question: Write code to make these work
+    add(2, 5); // 7
+    add(2)(5); // 7
+
+function add(a,b){
+    return a+b;
+}
+function add(a){
+    function(b){
+        return a+b
+            }
+}
+
+10. Question: What value is returned from the following statement?
+    "i'm a lasagna hog".split("").reverse().join("");
+
+    "goh angasal a m'i" 
+
+You need to split and then join  back together because reverse is an array element. 
+So you need to take the string, make it a an array, and then make it a string again. 
+
+11. Question: What is the value of window.foo?
+    ( window.foo || ( window.foo = "bar" ) );
+
+    undefined || "bar" 
+
+12. Question: What is the outcome of the two alerts below?
+    var foo = "Hello";
+    (function() {
+      var bar = " World";
+      alert(foo + bar);
+    })();
+    alert(foo + bar);
+
+Alert 1: "Hello World"
+Alert 2:  //VM264:6 Uncaught ReferenceError: bar is not defined at <anonymous>:6:14
+The reason that it is not "Hello"undefined is because bar is not even an element that is layed out at anypoint. 
+12.5. Question: What is the outcome of the two alerts below?
+    var foo = "Hello";
+    var bar;
+    (function() {
+      var bar = " World";
+      alert(foo + bar); // "Hello World"
+    })();
+    alert(foo + bar); // Helloundefined
+
+13. Question: What is the value of foo.length?
+    var foo = [];
+    foo.push(1);// [1]
+    foo.push(2); // [1,2]
+
+foo.length= "2"
+
+14. Question: What is the value of foo.x?
+    var foo = {n: 1};
+    var bar = foo;
+    foo.x = foo = {n: 2};
+
+ {
+            n: 1, 
+            x: {
+                n: 2
+            }
+        }
+
+15. What's a typical use case for anonymous functions?
+When we use event clicks, setTimeout,setInterval,onKeyup we typically use anonymous functions. 
+
+16. What is the difference between == and ===?
+   a = 2
+        this is assignment, we're putting 2 into the variable a
+    2 == "2" 
+        true
+        double is comparison of value
+    2 === "2"
+        false
+         triple is comparison of value and data type
+
+17. Make this work:
+    
+    duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
+
+ function duplicate(arr){
+                var arr_two = arr.slice(0); //[1,2,3,4,5]
+                return arr_two.concat(arr);
+            }
+        another solution
+            function duplicate(arr){
+                return arr.concat(arr);
+            }
+
+18. If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. 
+Find the sum of all the multiples of 3 or 5 below 1000.
+solution
+             var sum = 0;
+    for (var i=1; i<1000; i++){
+        if ((i % 3 == 0) || (i % 5 == 0)){
+            sum += i;
+        }
+    }
+    console.log(sum);
+
+% is what you use to see how many intergers are left over after a number goes into another number. 
+        example
+        10/2
+            5
+        
+        10%2
+            0
+        
+        10/3
+            3.3333333333333335
+        
+        10 % 3
+            1
+        
+        (10 % 3 == 0)
+            false
+        
+        (10 % 2 == 0)
+            true
+         
+19. Write a function that returns n number of even numbers in an array
+    3 would return [0,2,4]
+    4 would return [0,2,4,6]
+
+function returnEven(n){
+function nEvenArry(a){
+    var arry =[]
+    var counter = 0;
+    while (arr.length !=a){
+        if (counter % 2== 0){
+            arr.push(counter);
+        } 
+        counter++
+    }
+return arry;
+    
+}
+
+
+
+20. write a function that will return whether a number is even or odd.
+
+
+
+function isEven(a){
+    return a % 2== 0;
+}
