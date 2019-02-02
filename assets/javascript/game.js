@@ -39,7 +39,10 @@ function restartGame(){
     randomNum=Math.floor(Math.random()*num.length)
     startNum= num[randomNum];
     $("#randomNumber").html(startNum)
-    $('.buttons').attr('disabled',false);
+     $('#red').attr('disabled',false)
+        $('#blue').attr('disabled',false)
+        $('#green').attr('disabled',false)
+        $('#yellow').attr('disabled',false)
     $("#yourNumber").html("");
     yourNum= 0;
 
@@ -82,13 +85,19 @@ if(yourNum=== startNum){
         wins ++;
         $("#winstext").text("Wins:" + wins);
         $('#randomNumber').text("Press Restart");
-        $('.buttons').attr('disabled',true)
+        $('#red').attr('disabled',true)
+        $('#blue').attr('disabled',true)
+        $('#green').attr('disabled',true)
+        $('#yellow').attr('disabled',true)
 }else if( yourNum > startNum) {
        $("#yourNumber").text("LOSER")
         losses ++
         $('#randomNumber').text("Press Restart");
         $('#lossestext').text("Losses:" + losses)
-        $('.buttons').attr('disabled',true)
+         $('#red').attr('disabled',true)
+        $('#blue').attr('disabled',true)
+        $('#green').attr('disabled',true)
+        $('#yellow').attr('disabled',true)
 
 }};
 
